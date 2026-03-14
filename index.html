@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dar Zitoun — Moroccan Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="nav-logo-ar">دار زيتون</span>
+      <span class="nav-logo-en">Dar Zitoun</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">Our Story</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#reservation" class="nav-link nav-cta">Reserve a Table</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">An Authentic Moroccan Experience</p>
+      <h1 class="hero-title">Where Every Dish<br/><em>Tells a Story</em></h1>
+      <p class="hero-sub">From the medinas of Fès to the souks of Marrakech — taste the soul of Morocco in every bite.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explore the Menu</a>
+        <a href="#reservation" class="btn btn-outline">Book a Table</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="highlight-item">
+      <div class="highlight-icon">🫖</div>
+      <h3>Authentic Recipes</h3>
+      <p>Passed down through generations of Moroccan families</p>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">🌿</div>
+      <h3>Fresh Spices Daily</h3>
+      <p>Hand-selected from Moroccan markets every morning</p>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">🏺</div>
+      <h3>Traditional Setting</h3>
+      <p>Immersive décor crafted by Moroccan artisans</p>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-icon">⭐</div>
+      <h3>Award Winning</h3>
+      <p>Best Moroccan Restaurant — Gourmet Guide 2024</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-image-wrap">
+      <div class="about-img-placeholder">
+        <div class="about-ornament">✦</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">A Journey From the Heart of Morocco</h2>
+      <p>Dar Zitoun — "House of the Olive Tree" — was born from a deep love for Moroccan culinary heritage. Our founder, Chef Fatima El Alaoui, brought her grandmother's recipes from the ancient city of Fès, where the art of slow cooking and bold spices has been perfected over centuries.</p>
+      <p>Every tagine, every couscous, every pastilla is prepared with the same care and intention as if cooked for family. We source our spices directly from the souks of Marrakech and Fès, ensuring every dish carries the authentic fragrance of Morocco.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">80+</span>
+          <span class="stat-label">Dishes on the Menu</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU PAGE -->
+  <section class="menu-section" id="menu">
+    <div class="menu-header">
+      <p class="section-label">The Menu</p>
+      <h2 class="section-title">Crafted With Passion</h2>
+      <p class="menu-intro">Click any dish to discover its story, ingredients, and perfect pairings.</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn active" data-category="all">All</button>
+      <button class="tab-btn" data-category="starters">Starters</button>
+      <button class="tab-btn" data-category="tagines">Tagines</button>
+      <button class="tab-btn" data-category="couscous">Couscous</button>
+      <button class="tab-btn" data-category="grills">Grills</button>
+      <button class="tab-btn" data-category="desserts">Desserts</button>
+      <button class="tab-btn" data-category="drinks">Drinks</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="menu-grid" id="menuGrid">
+
+      <!-- STARTERS -->
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🥗</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Starter</span>
+            <h3 class="menu-item-name">Zaalouk</h3>
+            <p class="menu-item-short">Smoked aubergine & tomato salad</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">65 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">A silky, smoky dip of fire-roasted aubergine and fresh tomatoes seasoned with cumin, paprika, garlic, and a generous drizzle of argan oil. Served warm with freshly baked khobz bread.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Aubergine</span><span class="tag">Tomato</span><span class="tag">Cumin</span><span class="tag">Argan Oil</span><span class="tag">Garlic</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Moroccan Rosé</span><span class="tag suggest">🫖 Mint Tea</span><span class="tag suggest">🧀 Kefta Brochettes</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegan</span>
+              <span class="badge gf">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🥟</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Starter</span>
+            <h3 class="menu-item-name">Bastilla au Pigeon</h3>
+            <p class="menu-item-short">Flaky pastry stuffed with pigeon & almonds</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">120 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">One of Morocco's most celebrated dishes. Layers of paper-thin warqa pastry encase slow-cooked pigeon, saffron-scented eggs, toasted almonds and cinnamon — then dusted with powdered sugar for a hauntingly sweet-savoury finish.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Pigeon</span><span class="tag">Warqa Pastry</span><span class="tag">Almonds</span><span class="tag">Saffron</span><span class="tag">Cinnamon</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Guerrouane Rouge</span><span class="tag suggest">🫖 Mint Tea</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge chef">👨‍🍳 Chef's Signature</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🍲</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Starter</span>
+            <h3 class="menu-item-name">Harira Soup</h3>
+            <p class="menu-item-short">Traditional tomato, lentil & chickpea soup</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">55 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Morocco's beloved soul soup, rich with tomatoes, lentils, chickpeas, fresh coriander and parsley, thickened with a touch of flour and finished with a squeeze of lemon. A timeless comfort in every bowl.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Tomato</span><span class="tag">Lentils</span><span class="tag">Chickpeas</span><span class="tag">Coriander</span><span class="tag">Lemon</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍯 Dates & Chebakia</span><span class="tag suggest">🫖 Mint Tea</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegetarian</span>
+              <span class="badge pop">🔥 Popular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAGINES -->
+      <div class="menu-card" data-category="tagines">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🏺</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Tagine</span>
+            <h3 class="menu-item-name">Tagine Mrouzia</h3>
+            <p class="menu-item-short">Lamb with honey, raisins & almonds</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">185 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">A regal feast dish from Fès — tender slow-braised lamb shoulder cooked for hours in ras el hanout, honey, raisins and toasted almonds. Sweet, aromatic and deeply satisfying. Served in a traditional clay tagine.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Lamb</span><span class="tag">Honey</span><span class="tag">Raisins</span><span class="tag">Almonds</span><span class="tag">Ras El Hanout</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Meknes Syrah</span><span class="tag suggest">🍞 Moroccan Bread</span><span class="tag suggest">🫖 Mint Tea</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge chef">👨‍🍳 Chef's Signature</span>
+              <span class="badge pop">🔥 Popular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tagines">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🐔</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Tagine</span>
+            <h3 class="menu-item-name">Tagine Djaj Bil Lemon</h3>
+            <p class="menu-item-short">Chicken with preserved lemon & olives</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">145 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">The quintessential Moroccan tagine. Free-range chicken slowly braised with saffron, ginger, preserved lemon rinds and cracked green olives. Bright, tangy and impossibly fragrant — served straight from the clay pot.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Free-Range Chicken</span><span class="tag">Preserved Lemon</span><span class="tag">Green Olives</span><span class="tag">Saffron</span><span class="tag">Ginger</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Volubilia Blanc</span><span class="tag suggest">🍞 Khobz Bread</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge gf">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tagines">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🐟</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Tagine</span>
+            <h3 class="menu-item-name">Tagine Hout</h3>
+            <p class="menu-item-short">Fresh Atlantic fish with chermoula</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">160 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Fresh catch from the Atlantic coast, marinated in chermoula — a vibrant blend of coriander, cumin, paprika, garlic and lemon — then slow-cooked with potatoes, peppers, tomatoes and a drizzle of olive oil.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Sea Bass</span><span class="tag">Chermoula</span><span class="tag">Tomato</span><span class="tag">Pepper</span><span class="tag">Coriander</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Sauvignon Blanc</span><span class="tag suggest">🫖 Mint Tea</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge gf">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COUSCOUS -->
+      <div class="menu-card" data-category="couscous">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🍛</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Couscous</span>
+            <h3 class="menu-item-name">Couscous Royal</h3>
+            <p class="menu-item-short">The grand Friday couscous with three meats</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">220 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Morocco's Friday celebration dish. Hand-rolled couscous steamed three times to perfection, crowned with lamb, merguez, chicken, a rainbow of slow-stewed vegetables and finished with a rich, amber broth. A feast for the senses.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Hand-Rolled Couscous</span><span class="tag">Lamb</span><span class="tag">Merguez</span><span class="tag">Chicken</span><span class="tag">7 Vegetables</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Benslimane Rouge</span><span class="tag suggest">🫖 Mint Tea</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge chef">👨‍🍳 Chef's Signature</span>
+              <span class="badge pop">🔥 Popular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="couscous">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🌿</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Couscous</span>
+            <h3 class="menu-item-name">Couscous Tfaya</h3>
+            <p class="menu-item-short">With caramelised onions, raisins & chickpeas</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">155 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Fluffy couscous topped with a luxurious tfaya — a slow-cooked medley of sweet caramelised onions, plump raisins and chickpeas scented with cinnamon and saffron. Can be served with or without lamb.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Couscous</span><span class="tag">Caramelised Onions</span><span class="tag">Raisins</span><span class="tag">Saffron</span><span class="tag">Cinnamon</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🫖 Mint Tea</span><span class="tag suggest">🍯 Orange Blossom Dessert</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Can be Vegan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRILLS -->
+      <div class="menu-card" data-category="grills">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🥩</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Grill</span>
+            <h3 class="menu-item-name">Mechoui d'Agneau</h3>
+            <p class="menu-item-short">Slow-roasted whole lamb shoulder</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">250 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">A whole lamb shoulder rubbed with a paste of cumin, coriander, saffron, butter and garlic then slow-roasted in a sealed clay oven until the meat falls from the bone. Ceremonial, spectacular, unforgettable.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Lamb Shoulder</span><span class="tag">Cumin</span><span class="tag">Saffron Butter</span><span class="tag">Garlic</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Atlas Syrah</span><span class="tag suggest">🍞 Khobz</span><span class="tag suggest">🥗 Zaalouk</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge chef">👨‍🍳 Chef's Signature</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="grills">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🍢</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Grill</span>
+            <h3 class="menu-item-name">Kefta Brochettes</h3>
+            <p class="menu-item-short">Spiced minced lamb skewers over charcoal</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">110 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Hand-ground lamb blended with fresh parsley, onion, paprika, cumin and a touch of cinnamon, shaped onto skewers and grilled over glowing charcoal. Served with harissa, tomato salad and warm bread.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Minced Lamb</span><span class="tag">Parsley</span><span class="tag">Cumin</span><span class="tag">Paprika</span><span class="tag">Harissa</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍷 Moroccan Rosé</span><span class="tag suggest">🫖 Mint Tea</span><span class="tag suggest">🥗 Zaalouk</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge gf">🌾 Gluten-Free</span>
+              <span class="badge pop">🔥 Popular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-card" data-category="desserts">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🍮</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Dessert</span>
+            <h3 class="menu-item-name">Kaab el Ghzal</h3>
+            <p class="menu-item-short">Gazelle horns with almond paste & orange blossom</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">65 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Elegant crescent-shaped pastries filled with a fragrant almond and cinnamon paste perfumed with orange blossom water and lemon zest. Delicate, refined, and impossibly beautiful — the crown jewel of Moroccan patisserie.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Almonds</span><span class="tag">Orange Blossom</span><span class="tag">Cinnamon</span><span class="tag">Lemon Zest</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🫖 Mint Tea</span><span class="tag suggest">☕ Atay Bil Hlib</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegetarian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="desserts">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🍊</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Dessert</span>
+            <h3 class="menu-item-name">Salade d'Oranges</h3>
+            <p class="menu-item-short">Fresh orange slices with cinnamon & rose water</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">45 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Juicy Moroccan navel oranges, thinly sliced and arranged with fresh mint, a dusting of cinnamon and a splash of rose water. Light, refreshing and the perfect ending to a rich feast.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Navel Oranges</span><span class="tag">Rose Water</span><span class="tag">Cinnamon</span><span class="tag">Fresh Mint</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🫖 Mint Tea</span><span class="tag suggest">🍮 Kaab el Ghzal</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegan</span>
+              <span class="badge gf">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🫖</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Drink</span>
+            <h3 class="menu-item-name">Atay Bil Naana</h3>
+            <p class="menu-item-short">Traditional Moroccan mint tea</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">35 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Gunpowder green tea steeped with an abundance of fresh spearmint and sweetened with hand-cut sugar cones, poured in a graceful arc from a silver teapot. More than a drink — a Moroccan ceremony. Served for two.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Gunpowder Green Tea</span><span class="tag">Fresh Spearmint</span><span class="tag">Sugar Cones</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍮 Kaab el Ghzal</span><span class="tag suggest">🍊 Orange Salad</span><span class="tag suggest">🍯 Chebakia</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegan</span>
+              <span class="badge gf">🌾 Gluten-Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-top">
+          <div class="menu-emoji">🥤</div>
+          <div class="menu-card-info">
+            <span class="menu-category-badge">Drink</span>
+            <h3 class="menu-item-name">Jus d'Avocat</h3>
+            <p class="menu-item-short">Creamy avocado shake with orange blossom</p>
+          </div>
+          <div class="menu-price-toggle">
+            <span class="menu-price">50 MAD</span>
+            <button class="expand-btn" aria-label="Expand">+</button>
+          </div>
+        </div>
+        <div class="menu-card-detail">
+          <p class="detail-description">Ripe Moroccan avocados blended with cold milk, a touch of honey and a few drops of orange blossom water — an indulgent, velvety shake beloved in every Moroccan café. Served chilled, dusted with cinnamon.</p>
+          <div class="detail-meta">
+            <div class="detail-section">
+              <h4>Key Ingredients</h4>
+              <div class="tag-list">
+                <span class="tag">Avocado</span><span class="tag">Milk</span><span class="tag">Honey</span><span class="tag">Orange Blossom</span><span class="tag">Cinnamon</span>
+              </div>
+            </div>
+            <div class="detail-section">
+              <h4>Perfect Pairings</h4>
+              <div class="tag-list">
+                <span class="tag suggest">🍮 Any Dessert</span>
+              </div>
+            </div>
+            <div class="detail-badges">
+              <span class="badge veg">🌱 Vegetarian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end menu-grid -->
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <p class="section-label">Atmosphere</p>
+    <h2 class="section-title">Step Inside Dar Zitoun</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item gi-1"><div class="gallery-label">Our Dining Room</div></div>
+      <div class="gallery-item gi-2"><div class="gallery-label">The Riad Courtyard</div></div>
+      <div class="gallery-item gi-3"><div class="gallery-label">Tagines Fresh from the Clay</div></div>
+      <div class="gallery-item gi-4"><div class="gallery-label">The Tea Ceremony</div></div>
+      <div class="gallery-item gi-5"><div class="gallery-label">Handcrafted Pastilla</div></div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="reservation" id="reservation">
+    <div class="reservation-inner">
+      <div class="reservation-text">
+        <p class="section-label" style="color: var(--gold-light);">Reserve a Table</p>
+        <h2 class="section-title" style="color: #fff;">Join Us for an Unforgettable Evening</h2>
+        <p style="color: rgba(255,255,255,0.75);">We welcome you to experience the warmth and hospitality of a Moroccan home. Reservations recommended, walk-ins always welcome.</p>
+        <div class="contact-info">
+          <div class="contact-item">📞 +212 5XX-XXXXXX</div>
+          <div class="contact-item">📍 Rue des Oliviers, Medina, Fès</div>
+          <div class="contact-item">🕐 Open Daily: 12:00 – 23:00</div>
+        </div>
+      </div>
+      <form class="reservation-form" id="reservationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Youssef" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="El Mansouri" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" required />
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <select>
+              <option>12:00</option><option>13:00</option><option>14:00</option>
+              <option>19:00</option><option>20:00</option><option>21:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Guests</label>
+          <select>
+            <option>1 Person</option><option>2 People</option><option>3 People</option>
+            <option>4 People</option><option>5–8 People</option><option>Group (9+)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Special Requests</label>
+          <textarea placeholder="Allergies, special occasions, dietary requirements…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo-ar" style="font-size:2rem;">دار زيتون</span>
+        <span class="nav-logo-en">Dar Zitoun</span>
+        <p>Authentic Moroccan Cuisine since 2009</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TripAdvisor</a></li>
+          <li><a href="#">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Dar Zitoun. All rights reserved. Crafted with ♥ in Morocco.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">✓ Reservation received! We'll confirm shortly.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
